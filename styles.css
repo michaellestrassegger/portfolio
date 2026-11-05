@@ -1,8 +1,3 @@
-
-/* =========================
-   GRUNDEINSTELLUNGEN
-========================= */
-
 :root {
   --blue: #398fc1;
   --dark-blue: #245675;
@@ -59,11 +54,6 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-
-/* =========================
-   HEADER & NAVIGATION
-========================= */
-
 .header {
   width: min(1150px, calc(100% - 40px));
   margin: 24px auto 0;
@@ -118,11 +108,6 @@ a {
   font-weight: 700;
 }
 
-
-/* =========================
-   ALLGEMEINE ABSCHNITTE
-========================= */
-
 .hero,
 .skills,
 .projects,
@@ -174,11 +159,7 @@ p {
   text-transform: uppercase;
 }
 
-
-/* =========================
-   HERO
-========================= */
-
+/*hero*/
 .hero {
   min-height: 480px;
   display: grid;
@@ -225,11 +206,7 @@ p {
   margin-top: 28px;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
+/*buttons*/
 .button-primary,
 .button-secondary {
   display: inline-block;
@@ -260,11 +237,7 @@ p {
   box-shadow: 0 8px 20px rgba(48, 75, 93, 0.14);
 }
 
-
-/* =========================
-   SKILLS
-========================= */
-
+/*skills*/
 .skills {
   text-align: center;
 }
@@ -295,12 +268,14 @@ p {
   color: var(--blue);
   background: rgba(57, 143, 193, 0.1);
 }
+.skill-item svg {
+  width: 42px;
+  height: 42px;
+  display: block;
+  fill: currentColor;
+}
 
-
-/* =========================
-   PROJECTS
-========================= */
-
+/*projects*/
 .section-heading {
   display: flex;
   align-items: center;
@@ -406,46 +381,13 @@ p {
   font-weight: 700;
 }
 
-
-/* =========================
-   ABOUT
-========================= */
-
 .about p {
   max-width: 800px;
   color: var(--muted);
   font-size: 1.05rem;
 }
 
-
-/* =========================
-   LEARNING
-========================= */
-
-.learning-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 25px;
-}
-
-.learning-item {
-  padding: 22px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid var(--glass-border);
-}
-
-.learning-item p {
-  color: var(--muted);
-  margin-bottom: 0;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
+/*footer*/
 .contact {
   text-align: center;
 }
@@ -463,11 +405,6 @@ p {
   margin-top: 12px;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
 .footer {
   width: min(1100px, calc(100% - 40px));
   margin: 0 auto 25px;
@@ -477,10 +414,6 @@ p {
   font-size: 0.9rem;
 }
 
-
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
 
 @media (max-width: 850px) {
   .header {
