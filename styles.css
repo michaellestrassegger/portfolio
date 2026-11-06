@@ -113,7 +113,8 @@ a {
 .projects,
 .about,
 .learning,
-.contact {
+.contact,
+.content-container {
   width: min(1100px, calc(100% - 40px));
   margin: 35px auto;
   padding: 65px;
@@ -123,6 +124,17 @@ a {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
+}
+
+/* allgemeine Inhaltscontainer */
+.content-container {
+  text-align: left;
+}
+
+.content-container p {
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
 h1,
@@ -433,7 +445,8 @@ p {
   .projects,
   .about,
   .learning,
-  .contact {
+  .contact,
+  .content-container {
     padding: 40px;
   }
 
