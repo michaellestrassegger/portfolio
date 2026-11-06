@@ -1,8 +1,6 @@
 :root {
   --blue: #398fc1;
   --dark-blue: #245675;
-  --green: #8bc9a7;
-  --yellow: #f4d77e;
   --text: #304b5d;
   --muted: #6d8290;
   --white: #ffffff;
@@ -381,12 +379,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    135deg,
-    rgba(160, 210, 255, 0.35),
-    rgba(190, 235, 190, 0.4),
-    rgba(255, 225, 160, 0.4)
-  );
+  background: var(--light-gradient);
   color: var(--dark-blue);
   font-size: 1.2rem;
   font-weight: 700;
@@ -504,8 +497,7 @@ p {
     max-width: 240px;
   }
 
-  .project-grid,
-  .learning-list {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
