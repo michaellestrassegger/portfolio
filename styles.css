@@ -267,7 +267,7 @@ p {
 .skill-item {
   padding: 12px 22px;
   border-radius: 50px;
-  background: var(--light-gradient);
+  background: var(--dark-blue);
   border: 1px solid var(--glass-border);
   font-weight: 600;
   transition: transform var(--transition);
@@ -282,7 +282,7 @@ p {
   height: 42px;
   display: block;
   fill: currentColor;
-  color: var(--dark-blue);
+  color: var(--white);
 }
 
 /*projects*/
