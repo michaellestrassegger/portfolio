@@ -282,7 +282,7 @@ p {
   height: 42px;
   display: block;
   fill: currentColor;
-  background: var(--white);
+  color: var(--white);
 }
 
 /*projects*/
