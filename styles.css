@@ -520,6 +520,31 @@ p {
 }
 /*timeline*/
 
+
+/* LERNWEG */
+
+.learning-intro {
+  text-align: center;
+}
+
+.learning-intro p {
+  max-width: 750px;
+  margin: 20px auto 0;
+}
+
+/* TIMELINE */
+
+.timeline-container {
+  max-width: 1000px;
+  margin: 70px auto;
+  padding: 0 25px;
+}
+
+.timeline-container > h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
 .timeline {
   position: relative;
   display: flex;
@@ -528,12 +553,13 @@ p {
   padding-left: 115px;
 }
 
-/* Vertikale Verbindung */
+/* Durchgehende Linie */
+
 .timeline::before {
   content: "";
   position: absolute;
-  top: 40px;
-  bottom: 40px;
+  top: 30px;
+  bottom: 30px;
   left: 39px;
   width: 3px;
   background: linear-gradient(
@@ -546,26 +572,17 @@ p {
 }
 
 /* Einzelne Station */
+
 .timeline-item {
   position: relative;
 }
 
-/* Horizontale Linie durch die Bubble */
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  top: 57px;
-  left: -115px;
-  width: 115px;
-  height: 3px;
-  background: var(--blue);
-}
+/* Jahres-Bubbles */
 
-/* Bubble */
 .timeline-bubble {
   position: absolute;
   left: -115px;
-  top: 17px;
+  top: 20px;
   width: 80px;
   height: 80px;
   display: flex;
@@ -573,37 +590,127 @@ p {
   align-items: center;
   border-radius: 50%;
   background: var(--blue);
-  color: white;
+  color: var(--white);
   font-weight: 700;
+  font-size: 0.95rem;
   border: 5px solid rgba(255, 255, 255, 0.8);
   box-shadow: var(--shadow);
   z-index: 1;
 }
 
-/* Mobile */
+.timeline-item:nth-child(2) .timeline-bubble {
+  background: var(--green);
+  color: var(--dark-blue);
+}
+
+.timeline-item:nth-child(3) .timeline-bubble {
+  background: var(--yellow);
+  color: var(--dark-blue);
+}
+
+.timeline-item:nth-child(4) .timeline-bubble {
+  background: var(--blue);
+}
+
+.timeline-bubble-current {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+/* Inhaltskarten */
+
+.timeline-card {
+  padding: 35px;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.timeline-date {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.timeline-card h3 {
+  margin-bottom: 15px;
+  color: var(--dark-blue);
+}
+
+.timeline-card p {
+  max-width: 750px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* Themen-Tags */
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.timeline-tags span {
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: var(--light-blue);
+  color: var(--dark-blue);
+  font-size: 0.85rem;
+}
+
+/* Projektlink */
+
+.timeline-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--dark-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.timeline-link:hover {
+  color: var(--blue);
+}
+
+/* RESPONSIVE */
+
 @media (max-width: 600px) {
+  .timeline-container {
+    padding: 0 15px;
+    margin: 45px auto;
+  }
+
   .timeline {
     padding-left: 75px;
+    gap: 30px;
   }
 
   .timeline::before {
     left: 25px;
   }
 
-  .timeline-item::before {
-    left: -75px;
-    width: 75px;
-  }
-
   .timeline-bubble {
     left: -75px;
+    top: 18px;
     width: 55px;
     height: 55px;
-    top: 22px;
     font-size: 0.75rem;
+    border-width: 3px;
   }
 
-  .timeline-item::before {
-    top: 49px;
+  .timeline-card {
+    padding: 23px;
+  }
+
+  .timeline-card h3 {
+    font-size: 1.1rem;
   }
 }
