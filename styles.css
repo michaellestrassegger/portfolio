@@ -4,6 +4,7 @@
   --text: #304b5d;
   --muted: #6d8290;
   --white: #ffffff;
+  --light-blue: rgba(57, 143, 193, 0.1);
   --gradient: linear-gradient(120deg, var(--blue), #72b9a0);
   --light-gradient: linear-gradient(135deg, rgba(160, 210, 255, 0.35), rgba(190, 235, 190, 0.4), rgba(255, 225, 160, 0.4));
   
@@ -266,7 +267,7 @@ p {
   padding: 12px 22px;
   border-radius: 50px;
   color: var(--dark-blue);
-  background: var(--blue);
+  background: var(--light-blue);
   border: 1px solid var(--glass-border);
   font-weight: 600;
   transition: transform var(--transition);
@@ -361,7 +362,7 @@ p {
 .project-tags span {
   padding: 5px 12px;
   border-radius: 30px;
-  background: rgba(57, 143, 193, 0.1);
+  background: var(--light-blue);
   color: var(--dark-blue);
   font-size: 0.8rem;
   font-weight: 600;
