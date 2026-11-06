@@ -6,7 +6,8 @@
   --text: #304b5d;
   --muted: #6d8290;
   --white: #ffffff;
-
+  --gradient: linear-gradient(120deg, var(--blue), #72b9a0);
+  
   --glass: rgba(255, 255, 255, 0.55);
   --glass-border: rgba(255, 255, 255, 0.7);
   --shadow: 0 8px 32px rgba(48, 75, 93, 0.08);
@@ -233,12 +234,12 @@ p {
 
 .button-primary {
   color: var(--white);
-  background: linear-gradient(120deg, var(--blue), #72b9a0);
+  background: var(--gradient);
   box-shadow: 0 5px 16px rgba(57, 143, 193, 0.2);
 }
 
 .button-secondary {
-  color: linear-gradient(120deg, var(--blue), #72b9a0);
+  color: var(--gradient);
   background: var(--white);
   border: 1px solid var(--glass-border);
 }
@@ -262,11 +263,10 @@ p {
   margin-top: 30px;
 }
 
-.skill-item,
-.skill-more {
+.skill-item {
   padding: 12px 22px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--gradient);
   border: 1px solid var(--glass-border);
   font-weight: 600;
   transition: transform var(--transition);
@@ -276,10 +276,6 @@ p {
   transform: translateY(-3px);
 }
 
-.skill-more {
-  color: var(--blue);
-  background: rgba(57, 143, 193, 0.1);
-}
 .skill-item svg {
   width: 42px;
   height: 42px;
